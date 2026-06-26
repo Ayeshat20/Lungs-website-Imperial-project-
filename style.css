@@ -216,11 +216,14 @@ h1{
 
 .back-button{
 
+    position:absolute;
+
+    top:25px;
+    left:25px;
+
     display:inline-block;
 
     padding:12px 22px;
-
-    margin-bottom:25px;
 
     background:white;
 
@@ -232,7 +235,19 @@ h1{
 
     font-weight:800;
 
+    font-size:22px;
+
     box-shadow:0 8px 16px rgba(0,0,0,.12);
+
+    z-index:100;
+
+    transition:0.2s;
+}
+
+.back-button:hover{
+
+    transform:translateY(-2px);
+
 }
 
 /* ========================= */
