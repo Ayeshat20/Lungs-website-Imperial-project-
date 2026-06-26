@@ -5,11 +5,15 @@
 }
 
 body{
+
     font-family:'Baloo 2',cursive;
-    background:#edf8e8;
+
+    background:#edf9e8;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     min-height:100vh;
 }
 
@@ -18,71 +22,106 @@ body{
     width:430px;
     min-height:932px;
 
-    background:linear-gradient(#edf9e8,#e6f5df);
+    background:linear-gradient(#edfbe8,#e5f5df);
 
-    display:flex;
-    justify-content:center;
+    border-radius:20px;
 }
 
 .container{
 
-    width:100%;
-    text-align:center;
+    padding:40px 25px;
 
-    padding:50px 25px;
+    text-align:center;
 }
+
+/* Cartoon at top */
 
 .logo{
 
-    width:250px;
-    margin-top:30px;
-    margin-bottom:15px;
+    width:300px;
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 20px auto;
 }
 
 h1{
 
     font-size:58px;
+
     color:#2f7045;
+
     font-weight:800;
+
     line-height:1;
 }
 
 .subtitle{
 
-    color:#74a96d;
     font-size:20px;
-    font-weight:700;
+
+    color:#74a96d;
+
     margin-top:10px;
-    margin-bottom:45px;
+    margin-bottom:40px;
+
+    font-weight:700;
 }
+
+/* White buttons */
 
 .card{
 
     background:white;
+
     border-radius:28px;
 
-    padding:28px;
-
     display:flex;
+
     align-items:center;
 
-    margin-bottom:25px;
+    padding:20px 25px;
+
+    margin-bottom:22px;
 
     text-decoration:none;
 
     box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
-.icon{
+/* Your controller image */
 
-    font-size:42px;
-    margin-left:15px;
+.menu-icon{
+
+    width:55px;
+    height:55px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
 }
 
-.card span:last-child{
+/* Trophy & Book */
 
-    margin-left:35px;
+.emoji{
+
+    font-size:48px;
+
+    width:55px;
+
+    text-align:center;
+}
+
+/* Text */
+
+.card-text{
+
+    margin-left:25px;
+
     font-size:34px;
+
     font-weight:800;
+
     color:#2d6143;
 }
