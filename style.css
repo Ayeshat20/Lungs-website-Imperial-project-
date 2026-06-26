@@ -218,16 +218,16 @@ h1{
 
     position:absolute;
 
-    top:25px;
-    left:25px;
+    top:15px;
+    left:15px;
 
     display:inline-block;
 
-    padding:12px 22px;
+    padding:8px 16px;
 
     background:white;
 
-    border-radius:18px;
+    border-radius:14px;
 
     text-decoration:none;
 
@@ -235,9 +235,9 @@ h1{
 
     font-weight:800;
 
-    font-size:22px;
+    font-size:18px;
 
-    box-shadow:0 8px 16px rgba(0,0,0,.12);
+    box-shadow:0 6px 12px rgba(0,0,0,.10);
 
     z-index:100;
 
