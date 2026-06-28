@@ -111,7 +111,16 @@ completeButton.onclick=function(){
 
         next.classList.add("newUnlock");
 
-        next.innerHTML="●";
+        if(selectedButton + 1 == 10){
+
+    next.innerHTML="🏆";
+
+}
+else{
+
+    next.innerHTML="✔";
+
+}
 
         setTimeout(function(){
 
