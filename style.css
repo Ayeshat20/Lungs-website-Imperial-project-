@@ -94,11 +94,17 @@ body{
 
 .container{
 
-    padding:40px 28px;
+    width:100%;
+
+    max-width:380px;
+
+    margin:0 auto;
+
+    padding:40px 20px;
 
     text-align:center;
-}
 
+}
 /* ========================= */
 /* LUNGS IMAGE */
 /* ========================= */
@@ -426,15 +432,15 @@ h1{
 
     position:relative;
 
-    width:200px;
+    width:320px;
 
-    margin:20px auto 30px auto;
+    margin:30px auto;
 
 }
 
 .lungs-image{
 
-    width:240px;
+    width:320px;
 
     height:auto;
 
@@ -452,9 +458,9 @@ h1{
 
     position:absolute;
 
-    width:55px;
+    width:34px;
 
-    height:55px;
+    height:34px;
 
     border-radius:50%;
 
@@ -462,9 +468,9 @@ h1{
 
     cursor:pointer;
 
-    font-family:'Baloo 2',cursive;
+    font-family:'Baloo 2', cursive;
 
-    font-size:16px;
+    font-size:13px;
 
     font-weight:800;
 
