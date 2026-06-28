@@ -365,3 +365,233 @@ h1{
 }
 
 }
+
+.progress-container{
+
+    width:100%;
+
+    margin:20px 0 30px 0;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:22px;
+
+    background:#d8ead2;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:inset 0 2px 6px rgba(0,0,0,0.15);
+
+}
+
+.progress-fill{
+
+    width:10%;
+
+    height:100%;
+
+    background:#67c46c;
+
+    border-radius:20px;
+
+    transition:0.4s;
+
+}
+
+.progress-text{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    color:#2b7147;
+
+    font-weight:800;
+
+    font-size:18px;
+
+}
+
+/* ========================= */
+/* LUNG IMAGE */
+/* ========================= */
+
+.lung-map{
+
+    position:relative;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+    margin-bottom:30px;
+
+}
+
+.lungs-image{
+
+    width:340px;
+
+    max-width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+/* ========================= */
+/* ALVEOLI */
+/* ========================= */
+
+.alveolus{
+
+    position:absolute;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:'Baloo 2',cursive;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    transform:translate(-50%,-50%);
+
+    transition:0.25s;
+
+}
+
+/* First unlocked */
+
+.unlocked{
+
+    background:#67c46c;
+
+    color:white;
+
+    box-shadow:0 0 18px #67c46c;
+
+}
+
+.unlocked:hover{
+
+    transform:translate(-50%,-50%) scale(1.1);
+
+}
+
+/* Locked */
+
+.locked{
+
+    background:#d0d0d0;
+
+    color:#666;
+
+    cursor:not-allowed;
+
+}
+
+/* Final Trophy */
+
+#alveolus10{
+
+    background:#FFD84D;
+
+    color:#333;
+
+}
+
+/* ========================= */
+/* CHALLENGE POPUP */
+/* ========================= */
+
+.challenge-popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:340px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    z-index:1000;
+
+}
+
+.challenge-popup h2{
+
+    color:#2b7147;
+
+    margin-bottom:15px;
+
+}
+
+.challenge-popup p{
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+.challenge-button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#67c46c;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+}
+
+.challenge-button:hover{
+
+    background:#4fa756;
+
+}
