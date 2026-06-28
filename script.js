@@ -137,19 +137,22 @@ else{
 
     if(selectedButton===10){
 
-        setTimeout(function(){
+    const trophy = document.getElementById("alveolus10");
 
-            title.innerHTML="🏆 Healthy Lungs Champion!";
+    trophy.classList.remove("locked");
 
-            info.innerHTML="You completed every healthy challenge and unlocked the entire lung!";
+    trophy.classList.add("unlocked");
 
-            completeButton.style.display="none";
+    trophy.innerHTML="🏆";
 
-            popup.style.display="flex";
+    popup.style.display="flex";
 
-        },300);
+    title.innerHTML="🏆 Healthy Lungs Champion!";
 
-    }
+    info.innerHTML="Congratulations! You completed every healthy challenge and unlocked the entire lung!";
 
+    completeButton.style.display="none";
+
+}
 };
 
