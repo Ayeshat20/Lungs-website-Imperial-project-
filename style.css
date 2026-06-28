@@ -593,5 +593,161 @@ h1{
 .challenge-button:hover{
 
     background:#4fa756;
+/* ========================= */
+/* CHALLENGE POPUP */
+/* ========================= */
+
+.challenge-popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.45);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.popup-box{
+
+    width:320px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    animation:popup 0.3s ease;
+
+}
+
+.popup-box h2{
+
+    color:#2b7147;
+
+    margin-bottom:15px;
+
+    font-size:30px;
+
+}
+
+.popup-box h3{
+
+    color:#67c46c;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.popup-box p{
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    margin-bottom:30px;
+
+}
+
+.challenge-button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#67c46c;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    margin-bottom:15px;
+
+    transition:.2s;
+
+}
+
+.challenge-button:hover{
+
+    transform:scale(1.03);
+
+    background:#4fa756;
+
+}
+
+.close-button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#dddddd;
+
+    color:#333;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.close-button:hover{
+
+    background:#cfcfcf;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
 
 }
