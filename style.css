@@ -751,3 +751,40 @@ h1{
 }
 
 }
+/* ========================= */
+/* UNLOCK ANIMATION */
+/* ========================= */
+
+@keyframes unlockGlow{
+
+    0%{
+
+        transform:translate(-50%,-50%) scale(0.6);
+
+        box-shadow:0 0 0 #67c46c;
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-50%) scale(1.3);
+
+        box-shadow:0 0 35px #67c46c;
+
+    }
+
+    100%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+        box-shadow:0 0 15px #67c46c;
+
+    }
+
+}
+
+.newUnlock{
+
+    animation:unlockGlow .6s ease;
+
+}
