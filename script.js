@@ -1,80 +1,138 @@
-// Number of unlocked alveoli
-let unlocked = 1;
+// ==============================
+// LUNG ADVENTURE
+// ==============================
 
-// Cystic Fibrosis healthy challenges
+let currentLevel = 1;
+
 const challenges = [
 
-    "Walk for 30 minutes today 🚶",
+{
+title:"🚶 Walk for 30 minutes",
+info:"Walking helps loosen mucus inside the lungs, making breathing easier for people with Cystic Fibrosis."
+},
 
-    "Drink plenty of water today 💧",
+{
+title:"💧 Drink plenty of water",
+info:"Water helps keep mucus thinner, making it easier to clear from the lungs."
+},
 
-    "Eat 5 portions of fruit and vegetables 🍎",
+{
+title:"🍎 Eat 5 portions of fruit and vegetables",
+info:"A healthy diet helps the body fight infections and keeps the lungs healthier."
+},
 
-    "Do 20 squats 💪",
+{
+title:"🫁 Practise deep breathing for 5 minutes",
+info:"Deep breathing helps expand the lungs and improve airflow."
+},
 
-    "Practise deep breathing for 5 minutes 🫁",
+{
+title:"🧼 Wash your hands properly",
+info:"Good hygiene reduces the chance of chest infections."
+},
 
-    "Wash your hands properly 🧼",
+{
+title:"🧘 Stretch for 10 minutes",
+info:"Stretching improves posture and makes breathing easier."
+},
 
-    "Stretch for 10 minutes 🧘",
+{
+title:"🏃 Complete 20 squats",
+info:"Exercise strengthens your body and supports lung health."
+},
 
-    "Go for a short bike ride 🚴",
+{
+title:"😴 Get at least 8 hours of sleep",
+info:"Sleep helps your body recover and stay healthy."
+},
 
-    "Sleep for at least 8 hours 😴",
+{
+title:"❤️ Tell someone one fact about Cystic Fibrosis",
+info:"Sharing knowledge helps raise awareness of the condition."
+},
 
-    "Amazing! You've completed the Lung Adventure! 🏆"
+{
+title:"🏆 Healthy Lungs Champion!",
+info:"Congratulations! You completed every healthy challenge!"
+}
 
 ];
 
-// Add click event to every alveolus
+const popup = document.getElementById("challengePopup");
+const title = document.getElementById("challengeTitle");
+const info = document.getElementById("challengeInfo");
 
-for(let i = 1; i <= 10; i++){
+const completeButton = document.getElementById("completeChallenge");
+const closeButton = document.getElementById("closePopup");
 
-    const button = document.getElementById("alveolus" + i);
+let selectedButton = null;
 
-    button.addEventListener("click", function(){
+for(let i=1;i<=10;i++){
 
-        if(i > unlocked){
+    const button=document.getElementById("alveolus"+i);
 
-            alert("🔒 Complete the previous alveolus first!");
+    button.onclick=function(){
+
+        if(!button.classList.contains("unlocked")){
 
             return;
 
         }
 
-        let message = challenges[i-1];
+        selectedButton=i;
 
-        if(confirm(message + "\n\nPress OK once you've completed this challenge.")){
+        title.innerHTML=challenges[i-1].title;
 
-            if(unlocked < 10){
+        info.innerHTML=challenges[i-1].info;
 
-                unlocked++;
+        popup.style.display="flex";
 
-                document.getElementById("alveolus"+unlocked).classList.remove("locked");
-
-                document.getElementById("alveolus"+unlocked).classList.add("unlocked");
-
-                document.getElementById("alveolus"+unlocked).innerHTML="●";
-
-            }
-
-            // Update progress bar
-
-            let percent = unlocked*10;
-
-            document.querySelector(".progress-fill").style.width = percent + "%";
-
-            document.querySelector(".progress-text").innerHTML =
-            unlocked + " / 10 Alveoli Unlocked";
-
-            if(unlocked==10){
-
-                alert("🎉 Congratulations! You unlocked the whole lung!");
-
-            }
-
-        }
-
-    });
+    };
 
 }
+
+closeButton.onclick=function(){
+
+    popup.style.display="none";
+
+};
+
+completeButton.onclick=function(){
+
+    popup.style.display="none";
+
+    if(selectedButton<10){
+
+        const next=document.getElementById("alveolus"+(selectedButton+1));
+
+        next.classList.remove("locked");
+
+        next.classList.add("unlocked");
+
+        next.innerHTML="●";
+
+    }
+
+    document.querySelector(".progress-fill").style.width=(selectedButton*10)+"%";
+
+    document.querySelector(".progress-text").innerHTML=
+    selectedButton+" / 10 Alveoli Unlocked";
+
+    if(selectedButton===10){
+
+        setTimeout(function(){
+
+            title.innerHTML="🏆 Healthy Lungs Champion!";
+
+            info.innerHTML="You completed every healthy challenge and unlocked the entire lung!";
+
+            completeButton.style.display="none";
+
+            popup.style.display="flex";
+
+        },300);
+
+    }
+
+};
+
