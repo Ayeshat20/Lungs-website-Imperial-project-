@@ -406,7 +406,7 @@ h1{
 
     border-radius:20px;
 
-    transition:0.4s;
+    transition:width .8s ease;
 
 }
 
