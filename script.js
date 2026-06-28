@@ -53,7 +53,7 @@ info:"Sharing knowledge helps raise awareness of the condition."
 
 {
 title:"🏆 Healthy Lungs Champion!",
-info:"Congratulations! You completed every healthy challenge!"
+info:"Congratulations! You completed every health challenge!"
 }
 
 ];
