@@ -109,7 +109,15 @@ completeButton.onclick=function(){
 
         next.classList.add("unlocked");
 
+        next.classList.add("newUnlock");
+
         next.innerHTML="●";
+
+        setTimeout(function(){
+
+        next.classList.remove("newUnlock");
+
+},700);
 
     }
 
