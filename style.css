@@ -426,27 +426,21 @@ h1{
 
     position:relative;
 
-    width:100%;
+    width:240px;
 
-    display:flex;
-
-    justify-content:center;
-
-    margin-top:20px;
-
-    margin-bottom:30px;
+    margin:20px auto 30px auto;
 
 }
 
 .lungs-image{
 
-    width:340px;
+    width:240px;
 
-    max-width:100%;
+    height:auto;
 
-    border-radius:25px;
+    display:block;
 
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
+    margin:auto;
 
 }
 
